@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: zk-01
+  labels:
+    name: zk-cluster
+    type: nfs
+spec:
+  nfs:
+    path: /test/zk-01
+    server: 192.168.65.14
+  accessModes: 
+  - "ReadWriteOnce"
+  capacity:
+    storage: 1Gi
+  persistentVolumeReclaimPolicy: Recycle
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: zk-02
+  labels:
+    name: zk-cluster
+    type: nfs
+spec:
+  nfs:
+    path: /test/zk-02
+    server: 192.168.65.14
+  accessModes: 
+  - "ReadWriteOnce"
+  capacity:
+    storage: 1Gi
+  persistentVolumeReclaimPolicy: Recycle
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: zk-03
+  labels:
+    name: zk-cluster
+    type: nfs
+spec:
+  nfs:
+    path: /test/zk-03
+    server: 192.168.65.14
+  accessModes: 
+  - "ReadWriteOnce"
+  capacity:
+    storage: 1Gi
+  persistentVolumeReclaimPolicy: Recycle
